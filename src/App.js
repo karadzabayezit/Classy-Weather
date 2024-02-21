@@ -40,12 +40,10 @@ class App extends React.Component {
     weather: {},
   };
 
-  // async fetchWeather() {
   fetchWeather = async () => {
     if (this.state.location.length < 2) return this.setState({ weather: {} });
     this.setState({ isLoading: true });
     try {
-      // 1) Getting location (geocoding)
       const geoRes = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${this.state.location}`);
       const geoData = await geoRes.json();
 
@@ -54,7 +52,6 @@ class App extends React.Component {
       const { latitude, longitude, timezone, name, country_code } = geoData.results.at(0);
       this.setState({ displayLocation: `${name} ${convertToFlag(country_code)}` });
 
-      // 2) Getting actual weather
       const weatherRes = await fetch(
         `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&timezone=${timezone}&daily=weathercode,temperature_2m_max,temperature_2m_min`
       );
@@ -68,9 +65,7 @@ class App extends React.Component {
   };
 
   setLocation = (e) => this.setState({ location: e.target.value });
-  // useEffect without dependencies
   componentDidMount() {
-    // this.fetchWeather();
     this.setState({ location: localStorage.getItem("location") || "" });
   }
   //useEffect [location]
