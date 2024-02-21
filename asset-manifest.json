@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/https/karadzabayezit.github.io/Classy-Weather/static/css/main.28420eaf.css",
+    "main.js": "/https/karadzabayezit.github.io/Classy-Weather/static/js/main.76fa5e18.js",
+    "index.html": "/https/karadzabayezit.github.io/Classy-Weather/index.html",
+    "main.28420eaf.css.map": "/https/karadzabayezit.github.io/Classy-Weather/static/css/main.28420eaf.css.map",
+    "main.76fa5e18.js.map": "/https/karadzabayezit.github.io/Classy-Weather/static/js/main.76fa5e18.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.28420eaf.css",
+    "static/js/main.76fa5e18.js"
+  ]
+}
